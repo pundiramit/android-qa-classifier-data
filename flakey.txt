@@ -39,6 +39,53 @@ F VtsKernelLinuxKselftest#timers_nsleep-lat_32bit ALL HiKey960 ALL
 F VtsKernelLinuxKselftest#timers_set-timer-lat_64bit ALL HiKey960 ALL
 
 ## Flakey Cases ALL ALL ALL
+
+## Following CtsHardwareTestCases are marked as flakey based on upstream feedback https://issuetracker.google.com/issues/296552604
+F android.hardware.input.cts.tests.AsusGamepadTest#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.AsusGamepadTest#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.GameviceGv186Test#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.GameviceGv186Test#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.GameviceGv186Test#testAllMotions#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.GameviceGv186Test#testAllMotions#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.GoogleAtvReferenceRemoteControlTest#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.GoogleAtvReferenceRemoteControlTest#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.GoogleAtvReferenceRemoteControlTest#testHomeKey#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.GoogleAtvReferenceRemoteControlTest#testHomeKey#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.MicrosoftDesignerKeyboardTest#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.MicrosoftDesignerKeyboardTest#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.MicrosoftXbox2020Test#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.MicrosoftXbox2020Test#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.RazerKishiTest#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.RazerKishiTest#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.RazerServalTest#testAllKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.RazerServalTest#testAllKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.RazerServalTest#testHomeKey#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.RazerServalTest#testHomeKey#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.UsbVoiceCommandTest#testMediaKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.UsbVoiceCommandTest#testMediaKeys#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.UsbVoiceCommandTest#testVoiceAssistantKey#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.UsbVoiceCommandTest#testVoiceAssistantKey#armeabi-v7a ALL ALL ALL
+F android.hardware.input.cts.tests.UsbVoiceCommandTest#testVolumeKeys#arm64-v8a ALL ALL ALL
+F android.hardware.input.cts.tests.UsbVoiceCommandTest#testVolumeKeys#armeabi-v7a ALL ALL ALL
+
+## Following CtsLibcoreTestCases' libcore.java.net.* flakey tests make too many assumptions about the networking environment they are running in.
+F libcore.java.net.ConcurrentCloseTest#test_connect#arm64-v8a ALL ALL ALL
+F libcore.java.net.ConcurrentCloseTest#test_connect#armeabi-v7a ALL ALL ALL
+F libcore.java.net.ConcurrentCloseTest#test_connect_nonBlocking#arm64-v8a ALL ALL ALL
+F libcore.java.net.ConcurrentCloseTest#test_connect_nonBlocking#armeabi-v7a ALL ALL ALL
+F libcore.java.net.ConcurrentCloseTest#test_connect_timeout#arm64-v8a ALL ALL ALL
+F libcore.java.net.ConcurrentCloseTest#test_connect_timeout#armeabi-v7a ALL ALL ALL
+F libcore.java.net.SocketTest#testCloseDuringConnect#arm64-v8a ALL ALL ALL
+F libcore.java.net.SocketTest#testCloseDuringConnect#armeabi-v7a ALL ALL ALL
+F libcore.java.net.SocketTest#testSocketTestAllAddresses#arm64-v8a ALL ALL ALL
+F libcore.java.net.SocketTest#testSocketTestAllAddresses#armeabi-v7a ALL ALL ALL
+
+## Following CtsGraphicsTestCases failures are expected, due to missing Vulkan API (VK_ANDROID_external_memory_android_hardware_buffer) implementation in Freedreno.
+E android.graphics.cts.VulkanFeaturesTest#testVulkan1_1Requirements#arm64-v8a ALL ALL ALL
+E android.graphics.cts.VulkanFeaturesTest#testVulkan1_1Requirements#armeabi-v7a ALL ALL ALL
+E android.graphics.cts.VulkanFeaturesTest#testVulkanHardwareFeatures#arm64-v8a ALL ALL ALL
+E android.graphics.cts.VulkanFeaturesTest#testVulkanHardwareFeatures#armeabi-v7a ALL ALL ALL
+
 F android.systemui.cts.LightBarTests#testLightNavigationBar#arm64-v8a ALL ALL ALL
 F android.systemui.cts.LightBarTests#testLightNavigationBar#armeabi-v7a ALL ALL ALL
 F android.systemui.cts.LightBarTests#testNavigationBarDivider#arm64-v8a ALL ALL ALL
